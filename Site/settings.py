@@ -22,10 +22,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'django-insecure-7m!3mojt*xqc22qk6ry0=dz&^6w&#d#ay$8xk$$r602h1dnb_$'
 
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-7m!3mojt*xqc22qk6ry0=dz&^6w&#d#ay$8xk$$r602h1dnb_$')
+# SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-7m!3mojt*xqc22qk6ry0=dz&^6w&#d#ay$8xk$$r602h1dnb_$')
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
+DEBUG = False
+# DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
 ALLOWED_HOSTS = ['*']
 
@@ -122,8 +122,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = []
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
