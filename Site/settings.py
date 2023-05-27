@@ -29,6 +29,23 @@ DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
 ALLOWED_HOSTS = ['*']
 
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ALLOW_CREDENTIALS = True
+
+
+CSRF_TRUSTED_ORIGINS = ['https://django-server-production-323f.up.railway.app']
+
+CORS_REPLACE_HTTPS_REFERER = True
+
+CSRF_COOKIE_DOMAIN = 'django-server-production-323f.up.railway.app'
+
+CORS_ORIGIN_WHITELIST = (
+    'https://django-server-production-323f.up.railway.app',
+    'django-server-production-323f.up.railway.app',
+)
 
 # Application definition
 
